@@ -1,7 +1,15 @@
-var numbers = []
-for (var i = 0; i <= 100; i++) {
-    if (numbers % 2!==0) {
-        numbers.push(i)
+var output = document.getElementById("numbers")
+
+for (var i = 1; i <= 100; i++) {
+    output.innerHTML += i
+    if ((i % 3 === 0) && (i % 5 === 0)) {
+        output.innerHTML +="FIZZBUZZ"
     }
-    document.getElementById("numbers").innerHTML += numbers
+    else if (i % 3 === 0) {
+        output.innerHTML +="FIZZ"
+    } 
+    else if (i % 5 === 0) {
+        output.innerHTML +="BUZZ"
+    }
+        output.innerHTML += "<br>"
 }
